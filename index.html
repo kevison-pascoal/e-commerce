@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>e-commerce</title>
+</head>
+<body>
+  <section className="App">      
+    <nav className="navigator">
+      <ul>
+        <li> QUEM SOMOS </li>
+        <li> DEPOIMENTOS </li>
+        <li> FALE CONOSCO </li>
+        <li> MEUS PEDIDOS </li>
+        <li className="phoneNumber"> (81) 98334-5951 </li>
+      </ul>
+    </nav>
+
+    <header className="App-header">
+      <div className="logo">
+        <img src={Logo} alt="Logo"/>
+      </div>
+      <div className="search">
+        <h2>Seja bem-vindo(a). O que procura?</h2>
+        <input></input>
+      </div>
+      <div className="purchases">
+        <div>R$ {purchase}</div>
+      </div>
+    </header>
+
+    <div className="carousel">
+      <div className="carousel-anuncio">
+        <div className="slide" data-bg="cb021c">
+          <img src={Eu} alt="test-1"></img>
+          <h3>...</h3>
+          <a href="#">Comprar Agora</a>
+        </div>
+        <div className="slide" data-bg="0D1BF4">
+          <img src={EuE} alt="test-2"></img>
+          <h3>...</h3>
+          <a href="#">Comprar Agora</a>
+        </div>
+        <div className="slide" data-bg="44CAF9">
+          <img src={EuEu} alt="test-3"></img>
+          <h3>...</h3>
+          <a href="#">Comprar Agora</a>
+        </div>
+        <button className="left-arrow arrow" id="left">
+          left 
+        </button>
+        <button className="right-arrow arrow" id="right">
+          right 
+        </button>
+      </div>
+    </div>
+
+    <div className="produtos">
+    </div>
+    
+    <footer>
+
+    </footer>
+  </section>
+
+</body>
+</html>
