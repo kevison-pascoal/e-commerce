@@ -1,0 +1,58 @@
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.App {
+  width: 1200px;
+  margin: 0 auto;
+}
+/* App Header */
+
+.App-header {
+  width: 1200px;
+  height: 400px;
+  top: 90px;
+  background-color: #121212;
+  box-shadow: 0px 1px 10px #121212;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.App-header div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.App-header .logo img {
+  height: 200px;
+  width: 200px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+.App-header .logo img:hover {
+  height: 220px;
+  width: 220px;
+}
+
+.App-header .search input {
+  width: 300px;
+  height: 30px;
+  border-radius: 0px 5px;
+  border: none;
+}
+.App-header .search h2 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  color: #FEFEFE;
+}
+.App-header .purchases div {
+  font-size: 1rem;
+  padding: 10px;
+  width: 50%;
+  background-color: #000;
+  color: #FEFEFE;
+}
