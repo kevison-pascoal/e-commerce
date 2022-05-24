@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="./css/carousel.css">
   <link rel="stylesheet" href="./css/products.css">
   <link rel="stylesheet" href="./css/footer.css">
-
+ 
   <style>
     * {
       margin: 0;
@@ -23,21 +23,26 @@
     }
 
     body::-webkit-scrollbar {
-      width: 8px;               /* width of the entire scrollbar */
+      width: 8px; /* width of the entire scrollbar */
     }
     body::-webkit-scrollbar-track {
-      background: #3396FF;        /* color of the tracking area */
+      background: #3396FF; /* color of the tracking area */
     }
     body::-webkit-scrollbar-thumb {
-      background-color: #3396FF;    /* color of the scroll thumb */
-      border-radius: 20px;       /* roundness of the scroll thumb */
-      border: 2px solid #FEFEFE;  /* creates padding around scroll thumb */
+      background-color: #3396FF; /* color of the scroll thumb */
+      border-radius: 20px; /* roundness of the scroll thumb */
+      border: 2px solid #FEFEFE; /* creates padding around scroll thumb */
     }
-
   </style>
+  <link rel="stylesheet" href="./css/responsive.css" media="screen and (max-width: 1200px)">
 </head>
-<body>
-  <section class="App">      
+<body id="body">
+  <section id="App" class="App">    
+    <div id="hamburguer" class="humburguer">
+      <span class="line-1 line"></span>
+      <span class="line-2 line"></span>
+      <span class="line-3 line"></span>
+    </div>  
     <nav class="navigator">
       <ul>
         <li> QUEM SOMOS </li>
@@ -70,17 +75,17 @@
 
     <div class="carousel">
       <div class="carousel-anuncio" id="carousel">
-        <div class="slide" data-bg="343434">
+        <div class="slide" id="slide-1" data-bg="343434">
           <img src="image/vision.jfif" alt="image-1"></img>
           <h3>...</h3>
           <a href="#">Comprar Agora</a>
         </div>
-        <div class="slide" data-bg="212121">
+        <div class="slide" id="slide-2" data-bg="212121">
           <img src="image/foto.jpg" alt="image-2"></img>
           <h3>...</h3>
           <a href="#">Comprar Agora</a>
         </div>
-        <div class="slide" data-bg="343434">
+        <div class="slide" id="slide-3" data-bg="343434">
           <img src="image/foto-1.jpg" alt="image-3"></img>
           <h3>...</h3>
           <a href="#">Comprar Agora</a>
