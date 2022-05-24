@@ -16,7 +16,7 @@
   transition: transform 0.4s ease-in-out;
 }
 .carousel .carousel-anuncio .slide {
-  width: 1200px;
+  max-width: 100%;
   text-align: center;
   margin-top: 4rem;
 }
