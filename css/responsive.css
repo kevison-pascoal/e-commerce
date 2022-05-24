@@ -9,6 +9,20 @@
 
 @media only screen and (max-width: 900px) {
   * {
-    font-size: 70%;
+    font-size: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navigator ul {
+    display: none;
+  }
+  #hamburguer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 2;
   }
 }
