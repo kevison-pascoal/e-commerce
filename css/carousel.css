@@ -3,7 +3,7 @@
   transition: background 0.4s ease-in-out;
   overflow: hidden;
   position: relative;
-  height: 650px;
+  height: 40.625rem;
   width: 100%; 
   top: 5.625rem;
 }
