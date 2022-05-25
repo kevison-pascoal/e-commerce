@@ -28,6 +28,7 @@
 }
 .navigator ul li:hover {
   font-size: 1.03rem;
+  color: #3388FF;
 }
 .navigator ul .phoneNumber {
   background-color: #00CC88;
@@ -100,19 +101,4 @@
   font-size: 1.2rem;
   margin: 0.5rem;
   color: #FEFEFE;
-}
-
-#hamburguer {
-  display: none;
-  width: 3.625rem;
-  height: 3.625rem;
-  cursor: pointer;
-  margin: 1rem;
-}
-#hamburguer .line{
-  width: 100%;
-  height: 0.3rem;
-  border-radius: 5px;
-  display: block;
-  background-color: white;
 }
