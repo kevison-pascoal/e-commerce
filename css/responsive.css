@@ -17,12 +17,13 @@
   .navigator ul {
     display: none;
   }
-  #hamburguer {
+  #burger {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     position: fixed;
-    z-index: 2;
+    z-index: 4;
   }
+  
 }
