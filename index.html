@@ -7,6 +7,7 @@
   <title>e-commerce</title>
   <link rel="stylesheet" href="./css/app.css">
   <link rel="stylesheet" href="./css/navigator.css">
+  <link rel="stylesheet" href="./css/burger.css">
   <link rel="stylesheet" href="./css/carousel.css">
   <link rel="stylesheet" href="./css/products.css">
   <link rel="stylesheet" href="./css/footer.css">
@@ -36,13 +37,25 @@
   </style>
   <link rel="stylesheet" href="./css/responsive.css" media="screen and (max-width: 1200px)">
 </head>
-<body id="body">
+<body>
   <section id="App" class="App">    
-    <div id="hamburguer" class="humburguer">
+    <div id="burger" class="burger">
       <span class="line-1 line"></span>
       <span class="line-2 line"></span>
       <span class="line-3 line"></span>
-    </div>  
+    </div> 
+    <div id="menu">
+      <nav class="navigator_menu">
+        <ul>
+          <li> QUEM SOMOS </li>
+          <li> DEPOIMENTOS </li>
+          <li> FALE CONOSCO </li>
+          <li> MEUS PEDIDOS </li>
+        </ul>
+        <div class="phoneNumber"> (81) 98334-5951 </div>
+      </nav>
+    </div> 
+    <div id="area"></div>
     <nav class="navigator">
       <ul>
         <li> QUEM SOMOS </li>
@@ -176,6 +189,7 @@
       </div>
     </footer>
   </section>
+  <script src="./js/burger.js"></script>
   <script src="./js/carousel.js"></script>
   <script src="./js/products.js"></script>
   <script src="./js/purchases.js"></script>
