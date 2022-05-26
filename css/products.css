@@ -52,6 +52,9 @@
   font-weight: lighter;
   position: relative;
 }
+.products .product-single p strong {
+  font-size: 0.9rem;
+}
 .products .product-single button {
   width: 6.5rem;
   height: 2rem;
@@ -74,5 +77,4 @@
   height: 2.1rem;
 }
 
-/* Cart */
 
