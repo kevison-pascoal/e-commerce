@@ -39,6 +39,7 @@
 .navigator ul .phoneNumber:hover {
   box-shadow: 0px 1px 15px #00DD88;
   font-size: 1.04rem;
+  color: #FEFEFE;
 }
 #cart {
   width: 10%;
