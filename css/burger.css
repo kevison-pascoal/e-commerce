@@ -29,14 +29,14 @@
   transition: transform 1s;
 }
 .show-menu #burger .line-1 {
-  transform: rotate(45deg) translate(3px, 1px);
+  transform: rotate(45deg) translate(0.5rem, 0.3rem);
 }
 .show-menu #burger .line-2 {
   visibility: hidden;
-  transform: rotate(135deg) translate(6px, 12px);
+  transform: rotate(135deg) translate(0.375rem, 0.75rem);
 }
 .show-menu #burger .line-3{
-  transform: rotate(-45deg) translate(15px, -15px);
+  transform: rotate(-45deg) translate(0.9375rem, -0.9375rem);
 }
 .show-menu #area {
   height: 100%;
