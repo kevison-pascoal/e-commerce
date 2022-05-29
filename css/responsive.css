@@ -125,6 +125,7 @@
   .App-header {
     flex-direction: column;
     top: 8rem;
+    height: 35rem;
   }
   .App-header .logo img {
     height: 15rem;
