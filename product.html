@@ -5,8 +5,164 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Produto</title>
+  <link rel="stylesheet" href="./css/app.css">
+  <link rel="stylesheet" href="./css/navigator.css">
+  <link rel="stylesheet" href="./css/burger.css">
+  <link rel="stylesheet" href="./css/carousel.css">
+  <link rel="stylesheet" href="./css/products.css">
+  <link rel="stylesheet" href="./css/footer.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-size: 100%;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    body {
+      background: #212121;
+    }
+
+    body::-webkit-scrollbar {
+      width: 8px; /* width of the entire scrollbar */
+    }
+    body::-webkit-scrollbar-track {
+      background: #3396FF; /* color of the tracking area */
+    }
+    body::-webkit-scrollbar-thumb {
+      background-color: #3396FF; /* color of the scroll thumb */
+      border-radius: 20px; /* roundness of the scroll thumb */
+      border: 2px solid #FEFEFE; /* creates padding around scroll thumb */
+    }
+  </style>
 </head>
 <body>
-  
+  <section id="App" class="App">    
+    <div id="burger" class="burger">
+      <span class="line-1 line"></span>
+      <span class="line-2 line"></span>
+      <span class="line-3 line"></span>
+    </div> 
+    <div id="menu">
+      <nav class="navigator_menu">
+        <ul>
+          <li> QUEM SOMOS </li>
+          <li> DEPOIMENTOS </li>
+          <li> FALE CONOSCO </li>
+          <li> MEUS PEDIDOS </li>
+        </ul>
+        <div class="phoneNumber"> (81) 98334-5951 </div>
+      </nav>
+    </div> 
+    <div id="area"></div>
+    <nav class="navigator">
+      <ul>
+        <li> QUEM SOMOS </li>
+        <li> DEPOIMENTOS </li>
+        <li> FALE CONOSCO </li>
+        <li> MEUS PEDIDOS </li>
+        <li class="phoneNumber"> (81) 98334-5951 </li>
+      </ul>
+      <div id="cart">
+        <img src="./image/mockups.png" alt="cart">
+        <p>0</p>
+      </div>
+      <div id="cartList" class="cartList">
+        
+      </div>
+    </nav>
+
+    <header class="App-header">
+      <div class="logo">
+        <img src="image/mockups.png" alt="Logo"/>
+      </div>
+      <div class="search">
+        <h2>Seja bem-vindo(a). O que procura?</h2>
+        <input></input>
+      </div>
+      <div class="purchases">
+        <div class="price">R$ {purchase}</div>
+      </div>
+    </header>
+    
+    <footer id="footer" atr="footer">
+      <div class="footer">
+        <div class="informações item">
+          <h3>INFORMAÇÕES</h3>
+          <a href="#">+ Como comprar</a>
+          <a href="#">+ Termos de Uso</a>
+          <a href="#">+ Fretes e Entrega</a>
+          <a href="#">+ Trocas e Devoluções</a>
+          <a href="#">+ Segurança</a>
+          <a href="#">+ Política de Privacidade</a>
+        </div>
+        <div class="institucional item">
+          <h3>INSTITUCIONAL</h3>
+          <a href="#">+ Quem somos</a>
+          <a href="#">+ Depoimentos</a>
+          <a href="#">+ Onde Estamos</a>
+          <a href="#">+ Fale Conosco</a>
+          <a href="#">+ Mapa do Site</a>
+          <a href="#">+ Indique nossa Loja</a>
+        </div>
+        <div class="atendimento item">
+          <h3>ATENDIMENTO</h3>
+          <a href="#">(81)98334-5951</a>
+          <a href="#">(81)98585-4277</a>
+          <p>SEG - SAB de 07:00 ás 20:00</p>
+          <p>DOM de 08:00 ás 18:00</p>
+          <a href="#">contato@nocten.com.br</a>
+        </div>
+        <div class="redes-sociais item">
+          <h3>REDES SOCIAIS</h3>
+          <div class="redes-struct">
+            <a href="#"><img src="./image/social/instagram.jpg" alt="instagram"></a>
+            <a href="#"><img src="./image/social/facebook.jpg" alt="facebook"></a>
+          </div>
+        </div>
+
+        <div class="break"></div>
+
+        <div class="endereco item">
+          <h3>ENDEREÇO</h3>
+          <p>Avenida tanana, 267, Loja 12, Cohab, Recife - PE <br>CEP: tanana</p>
+        </div>
+        <div class="formas_pagamento item">
+          <h3>FORMAS DE PAGAMENTO</h3>
+          <div class="container-image">
+            <img src="./image/pag/.jpg" alt="pagamento">
+            <img src="./image/pag/.jpg" alt="pagamento">
+            <img src="./image/pag/.jpg" alt="pagamento">
+            <div class="break"></div>
+            <img src="./image/pag/.jpg" alt="pagamento">
+            <img src="./image/pag/.jpg" alt="pagamento">
+            <img src="./image/pag/.jpg" alt="pagamento">
+          </div>
+        </div>
+        <div class="certificados item">
+          <h3>CERTIFICADOS</h3>
+          <div class="container-image">
+            <img src="./image/certificados/SSL.jpg" alt="SSL">
+          </div>
+        </div>
+        <div class="break-response"></div>
+        <div class="newsletter item">
+          <h3>NEWSLETTER</h3>
+          <form action="">
+            <input type="text" placeholder="">
+            <input type="email" placeholder="">
+            <input type="button" value="Cadastrar">
+          </form>
+        </div>
+      </div>
+      <div>
+        <h2 class="footer footer-author">KEVISON PASCOAL MENDES - CNPJ:12.124.574/0001-11</h2>
+      </div>
+    </footer>
+  </section>
+  <script src="./js/burger.js"></script>
+  <script src="./js/carousel.js"></script>
+  <script src="./js/products.js"></script>
+  <script src="./js/purchases.js"></script>
 </body>
 </html>
