@@ -43,5 +43,14 @@ const dataBase = [
     type: 'shoes',
     discount: 4,
     amount: 0,
+  },
+  {
+    id: 5,
+    image: 'image/foto.jpg',
+    title: 'The Master of Middle',
+    price: 1657.84,
+    type: 'pants',
+    discount: 11,
+    amount: 0,
   }
 ]
