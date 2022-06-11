@@ -3,11 +3,11 @@ const pants = document.getElementById('pants');
 const shoes = document.getElementById('shoe');
 const shorts = document.getElementById('short');
 const hats = document.getElementById('hat');
-
-shirts.addEventListener('click', () => {
+initShirts = () => {
   containerProducts.innerHTML = ``;
   dataBase.map((val) => {
     if(val.type == 'shirt') {
+      console.log(val.id);
       containerProducts.innerHTML += `
       <div class="product-single">
         <img src="${val.image}"/>
@@ -25,6 +25,9 @@ shirts.addEventListener('click', () => {
     `;
     }
   })
+}
+shirts.addEventListener('click', () => {
+  initShirts();
 })
 pants.addEventListener('click', () => {
   containerProducts.innerHTML = ``;
