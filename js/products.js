@@ -11,9 +11,11 @@ initStore = () => {
             ou em ${val.discount}x de ${(val.price / val.discount).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2})}
           </p>
         </div>
-        <button type="submit" key="${val.id}" type="${val.type}" class="link_product">
-          Add To Cart  
-        </button>
+        <a href="product.html">
+          <button type="submit" key="${val.id}" type="${val.type}" class="link_product">
+            Add To Cart  
+          </button>
+        <a/>
       </div>
     `;
   })
