@@ -53,7 +53,7 @@ setInterval(() => {
   }
 
   intervalCarousel++;
-  if(intervalCarousel > 2) {
+  if(intervalCarousel > SLIDES_COUNT - 1) {
     rightCarousel();
     intervalCarousel = 0;
   }
