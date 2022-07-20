@@ -83,6 +83,12 @@
 .products .product-single p strong {
   font-size: 0.9rem;
 }
+
+.products .buttonsProducts {
+  margin-top: 3rem;
+  display: flex;
+  flex-direction: row;
+}
 .products .product-single button {
   width: 6.5rem;
   height: 2rem;
@@ -92,10 +98,10 @@
   border-radius: 5px;
   transition: 0.4s;
   position: relative;
-  margin-top: 3rem;
   color: #FEFEFE;
   text-decoration: none;
   font-size: 1rem;
+  margin-left: 0.6rem;
 }
 .products .product-single button:hover {
   background-color: #3399FF; /* #00DD33 */
@@ -104,5 +110,13 @@
   width: 7rem;
   height: 2.1rem;
 }
-
+.products .product-single .env_product {
+  background: #00CC55;
+  margin-left: 1.7rem;
+}
+.products .product-single .env_product:hover {
+  
+  background-color: #00DD33;
+  box-shadow: 0px 1px 10px #00DD11;
+}
 
