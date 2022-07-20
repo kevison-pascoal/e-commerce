@@ -1,23 +1,67 @@
 const containerProducts = document.getElementById('products');
-initStore = () => {
+const menu_products = document.getElementById('menu-products');
+initStore = (content) => {
+  containerProducts.innerHTML = '';
+  menu_products.innerHTML = `
+    <ul>
+      <li id="shirt">shirt</li>
+      <li id="pants">pants</li>
+      <li id="shoes">shoes</li>
+      <li id="short">shorts</li>
+      <li id="hat">hats</li>
+    </ul>
+  `
+  console.log(content);
   dataBase.map((val) => {
-    containerProducts.innerHTML += `
-      <div class="product-single">
-        <img src="${val.image}"/>
-        <div>
-          <h3>${val.title}</h3>
-          <p>
-            por <strong>${(val.price).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2})}</strong></br>
-            ou em ${val.discount}x de ${(val.price / val.discount).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2})}
-          </p>
+    if(content === undefined || content == '') {
+      containerProducts.innerHTML += `
+        <div class="product-single">
+          <img src="${val.image}"/>
+          <div>
+            <h3>${val.title}</h3>
+            <p>
+              por <strong>${(val.price).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2})}</strong></br>
+              ou em ${val.discount}x de ${(val.price / val.discount).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2})}
+            </p>
+          </div>
+          <div class="buttonsProducts">
+            <a href="product.html">
+              <button type="submit" key="${val.id}" type="${val.type}" class="link_product env_product">
+                Buy Item  
+              </button>
+            <a/>
+            <button type="submit" key="${val.id}" type="${val.type}" class="link_product">
+              Add To Cart  
+            </button>
+          </div>
         </div>
-        <a href="product.html">
-          <button type="submit" key="${val.id}" type="${val.type}" class="link_product">
-            Add To Cart  
-          </button>
-        <a/>
-      </div>
-    `;
+      `;
+    } else {
+      if(content == val.type) {
+        containerProducts.innerHTML += `
+        <div class="product-single">
+          <img src="${val.image}"/>
+          <div>
+            <h3>${val.title}</h3>
+            <p>
+              por <strong>${(val.price).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2})}</strong></br>
+              ou em ${val.discount}x de ${(val.price / val.discount).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2})}
+            </p>
+          </div>
+          <div class="buttonsProducts">
+            <a href="product.html">
+              <button type="submit" key="${val.id}" type="${val.type}" class="link_product env_product">
+                Buy Item  
+              </button>
+            <a/>
+            <button type="submit" key="${val.id}" type="${val.type}" class="link_product">
+              Add To Cart  
+            </button>
+          </div>
+        </div>
+      `;
+      }
+    }
   })
 }
 initStore();
