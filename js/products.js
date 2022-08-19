@@ -9,13 +9,14 @@ initStore = (content) => {
       <li id="shoes">shoes</li>
       <li id="short">shorts</li>
       <li id="hat">hats</li>
+      <li id="all">All</li>
     </ul>
   `
   console.log(content);
   dataBase.map((val) => {
     if(content === undefined || content == '') {
       containerProducts.innerHTML += `
-        <div class="product-single">
+        <div class="product-single" dataset="${val.type}" style="display: flex">
           <img src="${val.image}"/>
           <div>
             <h3>${val.title}</h3>
