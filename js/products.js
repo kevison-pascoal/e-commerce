@@ -1,5 +1,8 @@
 const containerProducts = document.getElementById('products');
 const menu_products = document.getElementById('menu-products');
+
+sessionStorage.removeItem('id');
+
 initStore = (content) => {
   containerProducts.innerHTML = '';
   menu_products.innerHTML = `
@@ -26,7 +29,7 @@ initStore = (content) => {
             </p>
           </div>
           <div class="buttonsProducts">
-            <a href="product.html">
+            <a href="product.html" onclick="sendProduct(${val.id})">
               <button type="submit" key="${val.id}" type="${val.type}" class="link_product env_product">
                 Buy Item  
               </button>
@@ -50,7 +53,7 @@ initStore = (content) => {
             </p>
           </div>
           <div class="buttonsProducts">
-            <a href="product.html">
+            <a href="product.html" onclick="sendProduct(${val.id})">
               <button type="submit" key="${val.id}" type="${val.type}" class="link_product env_product">
                 Buy Item  
               </button>
@@ -66,6 +69,10 @@ initStore = (content) => {
   })
 }
 initStore();
+
+function sendProduct(message) {
+  sessionStorage.setItem('id', message);
+}
 
 let count = 0;
 const cart = document.getElementById('cart');
