@@ -11,7 +11,6 @@ if(typeof(Storage)!="undefined") {
 } else {
   console.log("WebStorage not suported :(");
 }
-//let money = Math.random() * 200;
 setInterval( () => {
   localStorage.mathPurchases = Number(localStorage.mathPurchases) + 0.11;
   money = Number(localStorage.mathPurchases);
