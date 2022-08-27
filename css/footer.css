@@ -100,3 +100,15 @@
 div h2 {
   font-size: 1rem;
 }
+
+.item > h3 {
+  margin-bottom: 16px;
+}
+
+.list-footer > li {
+  margin-bottom: 8px;
+}
+
+.list-footer > li:last-of-type {
+  margin-bottom: 0;
+}
