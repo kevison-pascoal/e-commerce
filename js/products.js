@@ -1,7 +1,6 @@
 const containerProducts = document.getElementById('products');
 const menu_products = document.getElementById('menu-products');
-
-sessionStorage.removeItem('id');
+window.localStorage.removeItem('id');
 
 initStore = (content) => {
   containerProducts.innerHTML = '';
@@ -71,7 +70,7 @@ initStore = (content) => {
 initStore();
 
 function sendProduct(message) {
-  sessionStorage.setItem('id', message);
+  window.localStorage.setItem('id', message);
 }
 
 let count = 0;
