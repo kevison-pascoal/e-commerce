@@ -1,4 +1,4 @@
-const dataBase = [
+let dataBase = [
   { 
     id: 0,
     image: 'image/foto.jpg',

@@ -1,7 +1,9 @@
 const containerProducts = document.getElementById('products');
 const menu_products = document.getElementById('menu-products');
+let count = 0;
 
 sessionStorage.removeItem('id');
+sessionStorage.setItem('amount', JSON.stringify(dataBase));
 
 initStore = (content) => {
   containerProducts.innerHTML = '';
@@ -74,13 +76,35 @@ function sendProduct(message) {
   sessionStorage.setItem('id', message);
 }
 
-let count = 0;
 const cart = document.getElementById('cart');
 const cartList = document.getElementById('cartList');
 const cartListId = document.getElementById('cartList');
-updateCart = () => {
+
+function setCar() {
+  JSON.parse(sessionStorage.amount).forEach((val) => {
+    if (val.amount > 0) {
+      console.log(val.title+" && "+val.amount+" * "+val.price+" == "+(val.price*val.amount).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2}));
+      
+      count += val.amount;
+      cartList.innerHTML += `
+        <div>
+          <img src="${val.image}" alt="image" class="context"><img>
+          <p>
+            ${val.title} ${val.amount}
+          </p>
+        </div>        
+      `;
+    }
+  })
+  cart.innerHTML = `
+    <img src="./image/mockups.png" alt="icon"/>
+    <p>${count}</p>
+  `;
+}
+
+updateCart = (data) => {
+  sessionStorage.setItem('amount', JSON.stringify(data));
   console.clear();
-  cartList.innerHTML = '';
   if(count == 0 ){count = 1;};
   cart.innerHTML = `
     <img src="./image/mockups.png" alt="icon"/>
@@ -122,7 +146,10 @@ for (let i = 0; i < links.length; i++) {
   links[i].addEventListener("click", function(){
     let key = this.getAttribute('key');
     dataBase[key].amount++;
-    updateCart();
+    if(i == links.length - 1) {
+      console.log('ok');
+    }
+    updateCart(dataBase);
     return false;
   })
 }
