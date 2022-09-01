@@ -7,6 +7,7 @@ let dataBase = [
     type: 'shirt',
     discount: 2,
     amount: 0,
+    isPurchase: false,
   },
   {
     id: 1,
@@ -16,6 +17,7 @@ let dataBase = [
     type: 'hats',
     discount: 3,
     amount: 0,
+    isPurchase: false,
   },
   {
     id: 2,
@@ -25,6 +27,7 @@ let dataBase = [
     type: 'pants',
     discount: 8,
     amount: 0,
+    isPurchase: false,
   },
   {
     id: 3,
@@ -34,6 +37,7 @@ let dataBase = [
     type: 'shorts',
     discount: 5,
     amount: 0,
+    isPurchase: false,
   },
   {
     id: 4,
@@ -43,6 +47,7 @@ let dataBase = [
     type: 'shoes',
     discount: 4,
     amount: 0,
+    isPurchase: false,
   },
   {
     id: 5,
@@ -52,5 +57,6 @@ let dataBase = [
     type: 'pants',
     discount: 11,
     amount: 0,
+    isPurchase: false,
   }
 ]

@@ -1,9 +1,12 @@
 const containerProducts = document.getElementById('products');
 const menu_products = document.getElementById('menu-products');
+
 let count = 0;
 
 sessionStorage.removeItem('id');
 sessionStorage.setItem('amount', JSON.stringify(dataBase));
+
+window.localStorage.removeItem('id');
 
 initStore = (content) => {
   containerProducts.innerHTML = '';
@@ -73,7 +76,7 @@ initStore = (content) => {
 initStore();
 
 function sendProduct(message) {
-  sessionStorage.setItem('id', message);
+  window.localStorage.setItem('id', message);
 }
 
 const cart = document.getElementById('cart');
