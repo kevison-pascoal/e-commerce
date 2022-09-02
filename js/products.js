@@ -4,7 +4,9 @@ const menu_products = document.getElementById('menu-products');
 let count = 0;
 
 sessionStorage.removeItem('id');
-sessionStorage.setItem('amount', JSON.stringify(dataBase));
+if(localStorage.visits < 2) {
+  sessionStorage.setItem('amount', JSON.stringify(dataBase));
+}
 
 window.localStorage.removeItem('id');
 
@@ -84,11 +86,12 @@ const cartList = document.getElementById('cartList');
 const cartListId = document.getElementById('cartList');
 
 function setCar() {
-  JSON.parse(sessionStorage.amount).forEach((val) => {
+  count = 0;
+  JSON.parse(sessionStorage.amount).forEach((val, index) => {
     if (val.amount > 0) {
-      console.log(val.title+" && "+val.amount+" * "+val.price+" == "+(val.price*val.amount).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2}));
-      
-      count += val.amount;
+      //console.log(val.title+" && "+val.amount+" * "+val.price+" == "+(val.price*val.amount).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2}));
+      dataBase[index].amount = val.amount;
+      console.log(dataBase[index].amount+' '+val.amount);
       cartList.innerHTML += `
         <div>
           <img src="${val.image}" alt="image" class="context"><img>
@@ -98,16 +101,19 @@ function setCar() {
         </div>        
       `;
     }
+    count = count + val.amount;
+    cart.innerHTML = `
+      <img src="./image/mockups.png" alt="icon"/>
+      <p>${count}</p>
+    `;
   })
-  cart.innerHTML = `
-    <img src="./image/mockups.png" alt="icon"/>
-    <p>${count}</p>
-  `;
 }
+setCar();
 
 updateCart = (data) => {
   sessionStorage.setItem('amount', JSON.stringify(data));
   console.clear();
+  cartList.innerHTML = ``;
   if(count == 0 ){count = 1;};
   cart.innerHTML = `
     <img src="./image/mockups.png" alt="icon"/>
@@ -115,7 +121,7 @@ updateCart = (data) => {
   `;
   dataBase.map((val) => {
     if (val.amount > 0) {
-      console.log(val.title+" && "+val.amount+" * "+val.price+" == "+(val.price*val.amount).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2}));
+      //console.log(val.title+" && "+val.amount+" * "+val.price+" == "+(val.price*val.amount).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2}));
       
       cartList.innerHTML += `
         <div>
