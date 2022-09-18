@@ -33,7 +33,7 @@
 .info {
   display: flex;
   flex-direction: column;
-  margin-bottom: 64px;
+  margin-bottom: 4rem;
 }
 
 .info:last-child {
@@ -41,24 +41,104 @@
 }
 
 .info > h2 {
-  font-size: 48px;
-  margin-bottom: 8px;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
 }
 
+.about-product h4 {
+  font-size: 1.2rem;
+  margin: 0.2rem 0 0.2rem 0;
+  color: #121212;
+}
+.about-product span {
+  font-size: 1.2rem;
+  color: #121212;
+  margin: 0 0 0.4rem 0;
+}
+.about-product .size-item h3 {
+  font-size: 1.3rem;
+  color: #121212;
+}
+.about-product .size-item .sizes ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  width: 10rem;
+  margin: 0.0rem 0 0.8rem 0;
+}
+.about-product .size-item .sizes ul li {
+  font-size: 1rem;
+  padding: 0.4rem;
+  margin-left: 0.2rem;
+  background: #121212;
+  color: #FEFEFE;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.about-product .size-item .sizes ul li:hover {
+  background: #3396FF;
+}
+
+.about-product .area_button {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6rem;
+}
+.about-product .area_button #qtd_itens {
+  font-size: 1.2rem;
+  margin: 0 1rem 0 1rem;
+}
+.about-product .area_button button {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background: #3396FF;
+  color: #FEFEFE;
+  transition: 0.4s;
+}
+.about-product .area_button button:active {
+  background: #0066FF;
+  width: 2.1rem;
+  height: 2.1rem;
+}
+
+.about-product .buy-area {
+  display: flex;
+  flex-direction: column;
+}
+.about-product .buy-area div:nth-child(1) {
+  margin-bottom: 1.5rem;
+}
 .money {
-  font-size: 24px;
-  color: green;
+  font-size: 1.5rem !important;
+  color: green !important;
+}
+.about-product .parce_list {
+  margin-top: 0.6rem !important;
+  padding: 0.2rem 0.4rem;
+  border: 1px solid #121212;
+  font-size: 1.3rem;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.about-product .parce_list li {
+  font-size: 1.1rem;
+  text-align: left;
+  list-style: none;
 }
 
 .button-purchase-product {
   width: 100%;
-  padding: 16px 8px;
+  padding: 1rem 0.5rem;
   background-color: green;
-  color: white;
   border: none;
   outline: none;
   border-radius: 24px;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   cursor: pointer;
   transition: filter 250ms;
@@ -66,17 +146,19 @@
   justify-content: center;
   align-items: center;
 }
-
+.button-purchase-product span {
+  color: #FEFEFE;
+  margin: 0;
+}
 .cart-icon {
-  width: 32px;
-  margin-left: 24px;
+  width: 2rem;
+  margin-left: 1.5rem;
 }
 
 .animation-click {
   animation-name: click;
   animation-duration: 250ms;
 }
-
 @keyframes click {
   0% {
     transform: scale(1);
