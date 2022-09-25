@@ -86,8 +86,10 @@ const cartList = document.getElementById('cartList');
 const cartListId = document.getElementById('cartList');
 
 function setCar() {
+  console.log(cartList);
   count = 0;
-  JSON.parse(sessionStorage.amount).forEach((val, index) => {
+  //JSON.parse(sessionStorage.amount)
+  dataBase.forEach((val, index) => {
     if (val.amount > 0) {
       //console.log(val.title+" && "+val.amount+" * "+val.price+" == "+(val.price*val.amount).toLocaleString('pt-BR', {style: 'currency', currency: 'BRL', minimumFractionDigits: 2}));
       dataBase[index].amount = val.amount;
@@ -135,6 +137,7 @@ updateCart = (data) => {
   })
   return false;
 };
+setCar();
 
 function toggle(event) {
   console.log(event);
@@ -158,6 +161,7 @@ for (let i = 0; i < links.length; i++) {
     if(i == links.length - 1) {
       console.log('ok');
     }
+    console.log(dataBase[key].amount)
     updateCart(dataBase);
     return false;
   })
